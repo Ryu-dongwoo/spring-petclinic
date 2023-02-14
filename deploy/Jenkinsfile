@@ -2,16 +2,16 @@ pipeline  {
   agent any
   
   stages {
-    stage('Git fatch') {
+    stage('Git fetch') {
       steps {
-        echo 'Git fatch'
+        echo 'Git fetch'
         git url: 'https://github.com/Ryu-dongwoo/spring-petclinic.git/',
           branch: 'main', credentialsId: 'gitCredential'
       }
     }
     stage('Maven Build') {
       steps {
-        echo 'Maven build'
+        echo 'Maven Build'
       }
     }
     stage('Docker Image') {
