@@ -22,7 +22,7 @@ pipeline  {
     stage('Docker Image') {
       steps {
         echo 'Docker Image'
-        dir("${env.WORKSPACE}")   {                                #env 젠킨스가 제공해주는 변수
+        dir("${env.WORKSPACE}")   {                                
          sh 'docker build -t aws08-spring-petclinic:1.0'
       }
     }
