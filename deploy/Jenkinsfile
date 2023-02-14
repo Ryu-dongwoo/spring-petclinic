@@ -22,19 +22,20 @@ pipeline  {
     stage('Docker Image') {
       steps {
         echo 'Docker Image'
-        dir("${env.WORKSPACE}")   {                                
+        dir("${env.WORKSPACE}") {                                
          sh 'docker build -t aws08-spring-petclinic:1.0 .'
       }
     }
+  }
     stage('Image Push') {
       steps {
         echo 'Image Push'
-      }
     }
+  }
     stage('Codedeploy Workload') {
       steps {
         echo 'Codedeploy Workload'
-      }
     }
   }
+ }
 }
