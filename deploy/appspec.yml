@@ -3,7 +3,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: /
+  - source: /deploy/
     destinationo: /home/ubuntu
 permission:
   - object: /home/ubuntu
